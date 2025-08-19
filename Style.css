@@ -1,0 +1,427 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: auto;
+    gap: 2rem;
+}
+
+.profile-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.profile-text h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.profile-image img {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+.experience-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.experience-section header {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.experience-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.experience-section li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.skills {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.skills-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.skills-tabs button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+body.dark .skills-tabs button {
+  color: #fff;
+}
+
+.skills-tabs button.active {
+    border-bottom: 2px solid #fff;
+}
+
+body.dark .skills-tabs button.active {
+    color: #fff;
+    border-bottom: 2px solid #444;
+}
+
+body.light .skills-tabs button.active {
+    color: #000;
+    border-bottom: 2px solid #ddd;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    cursor: default;
+    border: 1px solid #2a2a2a;
+}
+
+.hidden {
+    display: none;
+}
+
+.projects-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-image {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-card header {
+  padding: 1rem;
+}
+
+.project-card footer {
+  padding: 0.75rem 1rem;
+  background-color: #121212;
+  font-size: 0.85rem;
+  color: #aaa;
+  border-radius: 8px;
+}
+
+/* Estilos generales de la sección */
+.contact-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column; /* Apila los enlaces verticalmente por defecto */
+    gap: 1rem; /* Espacio entre los enlaces */
+    align-items: center; /* Centra los enlaces horizontalmente */
+    margin-top: 1.5rem; /* Espacio superior para separar del título */
+}
+
+.contact-section a {
+    text-decoration: none;
+    border: #aaa 1px solid;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem; /* Un poco más de padding para hacerlos más clickables */
+    color: inherit; /* Hereda el color del texto si lo tienes definido en el body */
+    display: flex; /* Para centrar el contenido del enlace si tienes texto e icono */
+    align-items: center;
+    justify-content: center;
+    width: fit-content; /* El ancho se ajusta al contenido */
+    max-width: 90%; /* Evita que el enlace sea más ancho que la pantalla en móviles */
+}
+
+@media (min-width: 600px) { /* Puedes ajustar este breakpoint */
+    .contact-links {
+        flex-direction: row; /* En pantallas grandes, colócalos en fila */
+        flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+        justify-content: center; /* Centra los enlaces horizontalmente */
+        gap: 1.5rem; /* Espacio entre los enlaces en pantallas grandes */
+    }
+}
+
+body.dark .contact-section a {
+  color: #fff;
+  border-color: #444;
+  background-color: 
+  #121212;
+}
+
+body.light .contact-section a {
+  color: #000;
+  border-color: #ddd;
+}
+
+.icono-whatsapp {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  color: #333;  
+  background-color: #333; 
+  margin-bottom: 1rem;
+  width: 50%;
+  
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #000000;
+  color: #f0f0f0;
+}
+
+.profile-header,
+.skills,
+.projects-section {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project-card {
+  background-color: inherit;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+body.dark .project-card {
+  background-color: #000;
+  border-color: #444;
+}
+
+body.dark .skill-list li {
+  background: #333;
+  color: #ddd;
+  border: 1px solid #444;
+}
+
+body.light #theme-toggle {
+  background-color: #e0e0e0;
+  color: #000;
+  border: 2px;
+}
+
+body.light .profile-text p {
+  color: #000;
+}
+
+body.light .project-card footer {
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 8px;
+}
+
+body.light .skills-list li {
+  background: #f9f9f9;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.toggle-switch {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 100px;
+  height: 50px;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .profile-header,
+  .skills,
+  .projects-section {
+    max-width: 98vw;
+    padding: 1rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 600px) {
+    .profile-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .profile-image img {
+      width: 90px;
+    }
+    .skills-tabs {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .skill-list {
+      grid-template-columns: 1fr;
+    }
+    .toggle-switch {
+      width: 60px;
+      height: 34px;
+      top: 1rem;
+      right: 1rem;
+    }
+    .switch-label {
+      height: 34px;
+    }
+    .slider::before {
+      top: 5px;
+      left: 5px;
+      width: 20px;
+      height: 20px;
+    }
+    .checkbox:checked ~ .slider::before {
+      -webkit-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    hr {
+      width: 80%;
+    }
+  }
+  
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem; /* Espaciado entre iconos */
+  align-items: center;
+  margin-top: 0.5rem; 
+}
+
+.tech-stack i {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
