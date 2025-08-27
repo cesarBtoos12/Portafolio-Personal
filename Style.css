@@ -172,17 +172,19 @@ body.light .skills-tabs button.active {
 
 /* Estilos generales de la sección */
 .contact-section {
-    padding: 2rem;
+    padding: 2rem 1rem;
     max-width: 800px;
-    margin: auto;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .contact-links {
     display: flex;
-    flex-direction: column; /* Apila los enlaces verticalmente por defecto */
-    gap: 1rem; /* Espacio entre los enlaces */
-    align-items: center; /* Centra los enlaces horizontalmente */
-    margin-top: 1.5rem; /* Espacio superior para separar del título */
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 1.5rem;
 }
 
 .contact-section a {
@@ -196,6 +198,23 @@ body.light .skills-tabs button.active {
     justify-content: center;
     width: fit-content; /* El ancho se ajusta al contenido */
     max-width: 90%; /* Evita que el enlace sea más ancho que la pantalla en móviles */
+}
+
+.whatsapp {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.gmail {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.telefono {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
 
 @media (min-width: 600px) { /* Puedes ajustar este breakpoint */
@@ -217,13 +236,6 @@ body.dark .contact-section a {
 body.light .contact-section a {
   color: #000;
   border-color: #ddd;
-}
-
-.icono-whatsapp {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin-left: 6px;
 }
 
 hr {
